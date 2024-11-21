@@ -9,7 +9,7 @@ const commission = require("../controllers/admin");
 const notify = require("../controllers/admin");
 const notifyall = require("../controllers/admin");
 const home = require("../controllers/admin");
-
+const landing = require("../controllers/admin");
 const sessionMiddleware = require("../middleware/session");
 
 router.post("/login", login);
@@ -21,5 +21,5 @@ router.post("/commission", sessionMiddleware, commission);
 router.post("/notify", sessionMiddleware, notify);
 router.post("/notifyall", sessionMiddleware, notifyall);
 router.get("/home", sessionMiddleware, home);
-
+router.get("/landing", sessionMiddleware, landing);
 module.exports = router;
