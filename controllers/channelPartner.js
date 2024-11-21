@@ -118,6 +118,7 @@ app.post("/register", async(req, res) => {
                 </p>
                 <p style="font-size: 16px color: #333">Here is your referral code ${refcode}</p>
                 <div style="font-size: 16px color: #333 margin-top: 20px text-align: center">
+                <h5>You can now <a href="https://fixcare-ten.vercel.app/login>Login here</a> or copy https://fixcare-ten.vercel.app/login to you browser to continue to your dashboard.</h5>
                 <h5 style="font-size: 18px">Best Regards</h5>
                 <h5 style="font-size: 18px">FixTech Care</h5> 
                 </div>
