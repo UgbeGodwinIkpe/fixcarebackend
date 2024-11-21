@@ -14,6 +14,7 @@ const icon = require("../controllers/channelPartner");
 const register = require("../controllers/channelPartner");
 const mail = require("../controllers/channelPartner");
 const editUser = require("../controllers/channelPartner");
+const landing = require("../controllers/channelPartner");
 // payment options controllers
 const createPaypalOrder = require("../controllers/channelPartner")
 const confirmPaypalOrder = require("../controllers/channelPartner")
@@ -38,7 +39,5 @@ router.patch("/editUser", sessionMiddleware, editUser);
 router.post("/createPaypalOrder", sessionMiddleware, createPaypalOrder);
 router.post("/confirmPaypalOrder", sessionMiddleware, confirmPaypalOrder)
 router.post("/payment-stripe", sessionMiddleware, payWithStripe)
-router.get("/landing", (req, res) => {
-    res.send("Welcome to Fixtech care")
-})
+router.get("/landing", landing)
 module.exports = router;

@@ -276,6 +276,9 @@ app.get("/logout", async(req, res) => {
 app.get("/home", auth, (req, res) => {
     res.status(200).send("User Logged in and Session is Active");
 });
+app.get("/landing", (req, res) => {
+    res.status(200).send("Landing Page");
+});
 
 app.post("/upload", auth, async(req, res) =>
     upload.single("image")(req, res, function(err) {
@@ -768,5 +771,7 @@ app.post("/payWithStripe", async(req, res, next) => {
     }
 })
 
+module.exports = app;
+module.exports = app;
 module.exports = app;
 module.exports = app;
