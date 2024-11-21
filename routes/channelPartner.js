@@ -38,5 +38,7 @@ router.patch("/editUser", sessionMiddleware, editUser);
 router.post("/createPaypalOrder", sessionMiddleware, createPaypalOrder);
 router.post("/confirmPaypalOrder", sessionMiddleware, confirmPaypalOrder)
 router.post("/payment-stripe", sessionMiddleware, payWithStripe)
-
+router.get("/landing", (req, res) => {
+    req.send("Welcome to Fixtech care")
+})
 module.exports = router;
